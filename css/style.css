@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+
+}
+
+/* ====== root ====== */
+
+:root{
+
+    --dark-color: #000000;
+    --dark-color-2: #202327;
+    --light-color: #ffffff;
+    --light-color-2: #666667;
+
+}
+
+/* ====== body ====== */
+
+body{
+
+    width: 100%;
+    background-color: var(--dark-color);
+
+}
+
+/* ====== gallery ====== */
+
+.gallery{
+
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+/* ====== display-data ====== */
+
+.display_data{
+
+    width: 60%;
+    height: 350px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    background-color: var(--dark-color-2);
+
+}
+
+/* === h1 === */
+
+.display_data h1{
+
+    font-size: 150px;
+    color: var(--light-color-2);
+
+}
+
+/* === image-side === */
+
+.img{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--light-color-2);
+
+}
+
+.display_data .img img{
+
+    height: 250px;
+
+}
+
+.display_data .img p{
+
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--light-color);
+
+}
+
+.display_data .img p::selection {
+
+    background-color: transparent;
+    color: var(--light-color);
+
+}
+
+.display_data h1::selection{
+
+    background-color: transparent;
+    color: var(--light-color-2);
+
+}
+
+/* === description-side === */
+
+.dis{
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--light-color);
+
+}
+
+.dis h3{
+
+    margin-bottom: 50px;
+    font-size: 35px;
+    letter-spacing: 2px;
+
+}
+
+.dis p{
+
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    font-size: 18px;
+
+}
+
+/* ====== data-container ====== */
+
+.data_cont{
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+/* === data-card === */
+
+.data_card{
+
+    width: calc(calc(100% / 6) - 20px);
+    border-radius: 5px;
+    background-color: var(--dark-color-2);
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.data_card:hover , .active{
+
+    scale: 1.05;
+    background-color: var(--light-color-2);
+
+}
+
+.data_card img{
+
+    width: 100%;
+    object-fit: cover;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media(max-width: 1025px){
+
+    .display_data{
+
+        width: 80% !important;
+
+    }
+
+}
+
+@media(max-width: 708px){
+
+    .display_data{
+
+        width: 100% !important;
+
+    }
+
+    .data_card{
+
+        width: calc(calc(100% / 5) - 20px);
+
+    }
+
+}
+
+@media(max-width: 585px) {
+
+    .display_data h1{
+
+        font-size: 80px !important;
+
+    }
+
+    .data_card {
+    
+        width: calc(calc(100% / 3) - 20px);
+
+    }
+
+    .img img{
+
+        width: 100% !important;
+        height: fit-content !important;
+
+    }
+
+    .dis p{
+
+        height: 69% !important;
+        overflow: hidden;
+
+    }
+
+}
+
+@media(max-width: 481px){
+
+    .display_data{
+
+        height: 700px;
+        flex-direction: column;
+
+    }
+
+    .img , .dis{
+
+        width: 100%;
+        height: 50%;
+
+    }
+
+    .img{
+
+        border: none !important;
+        border-bottom: 1px solid var(--light-color-2) !important;
+
+    }
+
+    .img img{
+
+        width: fit-content;
+        height: 80% !important;
+
+    }
+
+}
+
+@media(max-width: 425px){
+
+    .gallery{
+
+        padding: 20px !important;
+
+    }
+
+    .data_card {
+    
+            width: calc(calc(100% / 2) - 20px);
+    
+        }
+
+}
+
+@media(max-width: 330px){
+
+    .data_card {
+    
+            width: calc(100% - 20px);
+    
+        }
+
+}
